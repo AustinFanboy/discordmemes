@@ -1,47 +1,42 @@
-# Discord Memes
+# Discord Shitpost
 
-Discord-Memes es un modulo para hacer memes en tu bot de discord, tiene images español, videos español, de todo español, y putin!
+Un modulo de discord que pone videos/imagenes de shitpost
 
-# Instalación
+# Para instalar:
 
-```npm install discord-memes```
+```npm install discord-shitpost```
 
 # Uso
 
-```js
-const memes = require("discord-memes"); //requerir el paquete
-console.log(memes.imagenesEspañol()) //retorna imagenes en español
-```
+``
+const Shitpost = require("discord-shitpost"); //Instalar paquete requerido
+console.log(Shitpost.imgShitpost()) //retorna imagenes de shitpost
+``
 
-# Ejemplo
-```js
-const memes = require('discord-memes');
+# Ejemplo Discord
+
+``js
+const Shitpost = require('discord-shitpost');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('Listo!')
+    console.log('A sus ordenes memero!')
 });
 
 client.on('message', (message) => {
-    if (message.content == 'meme') {
-        message.channel.send(memes.imagenesEspañol())
+    if (message.content == 'shitpost') {
+        message.channel.send(Shitpost.imgShitpost())
     }
 });
 
 client.login('token');
-```
+``
 
-# Métodos
+# Metodos 
+`Shitpost.imgShitpost` Retorna una imagen de un meme/shitpost
 
-`memes.imagenesEspañol()` retorna imagenes de memes en español
+`Shitpost.vidShitpost` Retorna un video de un meme o shitpost
 
-`memes.videosEspañol()` retorna videos de memes en español
-
-`memes.deTodoEspañol()` retorna de todo (videos e imagenes) en español
-
-`memes.putin()` retorna videos de putin caminando en diferentes versiones
-
-# Links
-
+`Shitpost.allShitpost` Retorna un meme random puede ser de imagen o de video
 [**Discord server**](https://discord.gg/sRuTH454aB)
